@@ -39,21 +39,7 @@ Tip="${Green_font_prefix}[注意]${Font_color_suffix}"
 
 #检查系统
 check_sys() {
-  if [[ -f /etc/redhat-release ]]; then
-    release="centos"
-  elif grep -q -E -i "debian|ubuntu" /etc/issue; then
-    release="debian"
-  elif grep -q -E -i "centos|red hat|redhat" /etc/issue; then
-    release="centos"
-  elif grep -q -E -i "Arch|Manjaro" /etc/issue; then
-    release="archlinux"
-  elif grep -q -E -i "debian|ubuntu" /proc/version; then
-    release="debian"
-  elif grep -q -E -i "centos|red hat|redhat" /proc/version; then
-    release="centos"
-  else
-    echo -e "ServerStatus 暂不支持该Linux发行版"
-  fi
+  release="debian"
   bit=$(uname -m)
 }
 check_installed_server_status() {
