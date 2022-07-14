@@ -24,3 +24,5 @@ bash status.sh s
 ```
 bash status.sh c
 ```
+
+## 其余信息去官方查看，建议脚本安装，手工安装有点费事
